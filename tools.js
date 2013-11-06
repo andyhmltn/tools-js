@@ -5,3 +5,8 @@ Object.prototype.each = function(callback){Object.keys(this).each(function(i,v) 
 //jQuery-esque selector/bindings
 var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
+
+var type = function (o) {
+    var s = Object.prototype.toString.call(o);
+    return s.match(/\[object (.*?)\]/)[1].toLowerCase();
+}
